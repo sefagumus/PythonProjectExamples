@@ -53,8 +53,7 @@ b10.next = None
 
 print(a10.next.val) # output = 2
 
-
-print(f"///////////////////////////////////")
+# exp 3:
 class A:
     def __init__(self, val):
         self.val = val
