@@ -1,7 +1,14 @@
 """
 -- instance method → obje ile çalışır (self)
 -- class method → class ile çalışır (cls)
--- static method → sadece fonksiyon, class ile bağı yok
+-- static method → sadece fonksiyon, class ile bağı yok -- yardımcı fonksiyon
+
+| Tür             | İlk Parametre | Neye Erişir           | Nereden Çağrılır |
+| --------------- | ------------- | --------------------- | ---------------- |
+| Instance Method | `self`        | instance + class      | object           |
+| Class Method    | `cls`         | sadece class          | class            |
+| Static Method   | yok           | hiçbirine bağlı değil | class            |
+
 """
 
 class School:
@@ -31,7 +38,8 @@ s2 = School("Beyazit")
 
 # instance
 s1.info_student() # output: Sefa
-
+# x = School.add(a=12,b=10)
+# print(x)
 # classmethod
 School.total_students() # output: 2
 
@@ -58,7 +66,7 @@ class User:
         print(f"Added new user : {self.username}")
 
     def __del__(self):
-        User.total_users -= 1
+       # User.total_users -= 1
         print(f"Deleted user: {self.username}")
 
     @classmethod
@@ -66,7 +74,13 @@ class User:
         print(f"{cls.total_users}")
 
 
-
 user1 = User("karavanbeyi")
 user2 = User("sefaguemus")
+
+# 1. çağırma yöntemi
+x = User.total
+print(User.total_users)
+
+# 2. çağırma yöntemi
+User.total()
 
