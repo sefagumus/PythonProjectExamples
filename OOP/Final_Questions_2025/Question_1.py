@@ -23,13 +23,13 @@ class Node:
         self.children = []      # alt düğümleri tutuyor.
 
 
-#TODO -> tek mi ? çift mi?
+#TODO -> tek mi ? çift mi? class Node'dan bağımsız fonksiyon.
 def control(node):
     if node.value % 2 == 0:   #  ".value % 2 == 0" -> 2'ye tam bölünür.
         print(node.value)
     else:
         print(math.sqrt(node.value)) # "math.sqrt(.value)" -> karekökünü alır.
-
+# Döndürmeyi unutma
     for child in node.children:
         control(child)
 
