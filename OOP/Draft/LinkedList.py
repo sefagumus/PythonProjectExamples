@@ -6,6 +6,11 @@ class LinkedList:
     def Calculate(self, param):
         pass
 
+        if not (self.ref == None):
+            self.ref.Calculate(param)
+        else:
+            print("Finish")
+
 
 n0 = LinkedList(1)
 n1 = LinkedList(2)
@@ -16,7 +21,7 @@ n0.ref = n1
 n1.ref = n2
 n2.ref = n3
 
-# n0.Calculate(20)
+n0.Calculate(20)
 
 
 

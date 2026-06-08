@@ -17,38 +17,36 @@ import math
 
 class Node:
 
-    def __init__(self, name, value):
-        self.name = name        # isteğe bağlı isim vermek istersen.
-        self.value = value      # değer tutuyor
-        self.children = []      # alt düğümleri tutuyor.
+    def __init__(self, value):
+        self.value = value
+        self.children = []
 
+    def Calculate(self):
 
-#TODO -> tek mi ? çift mi? class Node'dan bağımsız fonksiyon.
-def control(node):
-    if node.value % 2 == 0:   #  ".value % 2 == 0" -> 2'ye tam bölünür.
-        print(node.value)
-    else:
-        print(math.sqrt(node.value)) # "math.sqrt(.value)" -> karekökünü alır.
-# Döndürmeyi unutma
-    for child in node.children:
-        control(child)
+        if self.value % 2 == 0:
+            print(self.value)
+        else:
+            print(math.sqrt(self.value))
+
+        for child in self.children:
+            child.Calculate()
 
 
 #TODO -> her bir node'u oluşturduğumuz kısım.
-n0 = Node("N0",2)
+n0 = Node(2)
 
-n1 = Node("N1",35)
-n2 = Node("N2",16)
+n1 = Node(35)
+n2 = Node(16)
 
-n3 = Node("N3",42)
-n4 = Node("N4",60)
+n3 = Node(42)
+n4 = Node(60)
 
-n5 = Node("N5",38)
-n6 = Node("N6",96)
+n5 = Node(38)
+n6 = Node(96)
 
-n7 = Node("N7",23)
-n8 = Node("N8",44)
-n9 = Node("N9",23)
+n7 = Node(23)
+n8 = Node(44)
+n9 = Node(23)
 
 
 #TODO -> ağaç yapısını oluşturduğumuz kısım.
@@ -58,5 +56,4 @@ n2.children = [n5, n6]
 n3.children = [n7, n8, n9]
 
 
-control(n0)
-
+n0.Calculate()
