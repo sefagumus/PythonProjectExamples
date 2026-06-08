@@ -3,12 +3,12 @@ class TreeStructures:
         self.value = value
         self.children = []
 
-    def Calculate(self):
+    def calculate(self):
         pass
     # pass'ı sil ve işlemi yap
 
         for child in self.children:
-            child.Calculate()
+            child.calculate()
 
 
 n0 = TreeStructures(60)
@@ -22,4 +22,4 @@ n4 = TreeStructures(3)
 n0.children = [n1, n2]
 n1.children = [n3, n4]
 
-n0.Calculate()
+n0.calculate()
