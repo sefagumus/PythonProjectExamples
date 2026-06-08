@@ -9,13 +9,13 @@ class Node:
         self.value = value
         self.children = []
 
-def control(x):
-    if x.value % 2 == 0:
-        print(x.value)
+def control(self):
+    if self.value % 2 == 0:
+        print(self.value)
     else:
-        print(math.sqrt(x.value))
+        print(math.sqrt(self.value))
 # Döndürmeyi unutma
-    for child in x.children:
+    for child in self.children:
         control(child)
 
 n0 = Node("N0", 2)
