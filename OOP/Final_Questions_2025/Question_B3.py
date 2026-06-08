@@ -14,7 +14,6 @@ class Garage:
     def Add(self, vehicle):
         self.vehicles.append(vehicle)
 
-
     def Remove(self, plate):
 
         for vehicle in self.vehicles:
@@ -25,7 +24,6 @@ class Garage:
                 return
 
         print("Vehicle not found")
-
 
     def ListVehicles(self):
 
