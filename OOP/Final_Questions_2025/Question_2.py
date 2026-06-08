@@ -2,7 +2,7 @@ import math
 
 class Pizza:
 
-    radius = 2 # class method buna "cls.radius" ile erişir.
+    radius = 5 # class method buna "cls.radius" ile erişir.
 
     def __init__(self, radius, ingredients):
         self.radius = radius
@@ -12,7 +12,7 @@ class Pizza:
         return self.circle_area(self.radius)
 
     @classmethod
-    def area_cls(cls):
+    def Area(cls):
         return cls.radius ** 2 * math.pi
 
     # Static method fonksiyon sınıfın içindedir ama nesneyle ilgilenmez. Sadece matematik yapar.
@@ -24,6 +24,9 @@ class Pizza:
 p = Pizza(4, ["mozzarella", "tomatoes"])
 print(p.area())
 
+print(Pizza(4,["zeytin", "Mantar"]).Area()) # radius 4 verilmiş ama cls.radius'u okur
+
+"""
 # class method
 c = Pizza.area_cls()
 print(c)
@@ -31,3 +34,4 @@ print(c)
 # static method
 s = Pizza.circle_area(4)
 print(s)
+"""
