@@ -26,7 +26,7 @@ class Node:
         # Son düğüm değilse sonucu sonraki düğüme gönder
         else:
             self.ref.Calculate(result)
-
+ 
 
 n0 = Node(1)
 n1 = Node(2)
