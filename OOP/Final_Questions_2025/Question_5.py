@@ -22,7 +22,6 @@ class Node:
         # Son düğüm ise sonucu ekrana yazdır
         if self.ref == None:
             print("Final Result =", result)
-
         # Son düğüm değilse sonucu sonraki düğüme gönder
         else:
             self.ref.Calculate(result)
